@@ -147,6 +147,46 @@
       background: #000;
       font-size: 14px;
     }
+    #viewer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+}
+
+    #viewer img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 15px;
+}
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: gold;
+      cursor: pointer;
+}
+
+    .gallery img {
+      cursor: pointer;
+}
+
+    form input {
+      width: 80%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-bottom: 10px;
+}
   </style>
 </head>
 
@@ -198,11 +238,28 @@
   <section>
   <h2>Travay Nou</h2>
 
-  <div class="gallery">
-    <img src="images/IMG_6870.jpg" style="width:100%; border-radius:10px;">
-    <img src="images/IMG_9852.jpg" style="width:100%; border-radius:10px;">
-    <img src="images/IMG_6991.png" style="width:100%; border-radius:10px;">
-  </div>
+<div class="gallery">
+  <img src="images/IMG_6870.jpg" style="width:100%; border-radius:10px;" onclick="openViewer(this.src)">
+  <img src="images/IMG_9852.jpg" style="width:100%; border-radius:10px;" onclick="openViewer(this.src)">
+  <img src="images/IMG_6991.png" style="width:100%; border-radius:10px;" onclick="openViewer(this.src)">
+</div>
+
+<section>
+  <h2>Pran Randevou</h2>
+
+  <form onsubmit="sendToWhatsApp(event)" class="card">
+
+    <input type="text" id="name" placeholder="Non ou" required><br><br>
+
+    <input type="text" id="service" placeholder="Sèvis (Recording, Photo...)" required><br><br>
+
+    <input type="date" id="date" required><br><br>
+
+    <button class="btn" type="submit">📲 Voye sou WhatsApp</button>
+
+  </form>
+</section>
+
 </section>
 
   <section class="about">
@@ -217,7 +274,7 @@
     <h2>Ou Bezwen Yon Sèvis?</h2>
     <p style="margin-bottom: 25px;">Plas limite chak semèn — rezève kounya.</p>
 
-    <a class="btn" href="https://wa.me/50943403804?text=Bonjou%20mwen%20vle%20rezève%20yon%20sèvis%20Clair%20Complexe">
+    <a class="btn" href="https://wa.me/50943403804?text=Hi!!!%20mwen%20vle%20rezève%20yon%20sèvis%20Clair%20Complexe">
       Kontakte Nou
     </a>
   </section>
@@ -225,5 +282,38 @@
   <footer>
     © 2026 Clair Complexe / Clair Sound — Cap-Haïtien, Haiti
   </footer>
+
+  <div id="viewer" onclick="closeViewer()">
+  <span class="close">&times;</span>
+  <img id="viewer-img" src="">
+</div>
+
+<script>
+function openViewer(src) {
+  document.getElementById("viewer").style.display = "flex";
+  document.getElementById("viewer-img").src = src;
+}
+
+function closeViewer() {
+  document.getElementById("viewer").style.display = "none";
+}
+</script>
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let service = document.getElementById("service").value;
+  let date = document.getElementById("date").value;
+
+  let message = `Hi!!!, mwen se ${name}%0A
+M vle pran randevou pou: ${service}%0A
+Dat: ${date}`;
+
+  let phone = "50943403804"; // mete nimewo ou
+
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+}
+</script>
 </body>
 </html>
