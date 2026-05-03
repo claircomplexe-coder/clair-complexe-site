@@ -1,73 +1,199 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8">
-  <title>Clair Sound Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clair Complexe | Studio Photo & Sound</title>
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial;
-      background: black;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #050505;
       color: white;
-      text-align: center;
+      line-height: 1.6;
     }
+
     header {
-      padding: 40px;
-      font-size: 32px;
-      font-weight: bold;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+        radial-gradient(circle at top, #4d3900, #050505 55%);
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .logo {
+      font-size: 64px;
+      font-weight: 900;
       color: gold;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
     }
-    section {
-      padding: 20px;
+
+    h1 {
+      font-size: 42px;
+      color: #ffd700;
+      margin-bottom: 15px;
     }
-    .card {
-      background: #111;
-      margin: 15px;
-      padding: 20px;
-      border-radius: 10px;
+
+    .subtitle {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 30px;
     }
+
     .btn {
       display: inline-block;
-      padding: 15px 25px;
-      background: gold;
+      background: linear-gradient(135deg, #ffd700, #b8860b);
       color: black;
+      padding: 15px 28px;
+      border-radius: 40px;
       text-decoration: none;
-      border-radius: 8px;
-      margin-top: 20px;
       font-weight: bold;
+      box-shadow: 0 0 25px rgba(255, 215, 0, .35);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ffd700;
+      font-size: 34px;
+      margin-bottom: 35px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid rgba(255, 215, 0, .25);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 215, 0, .08);
+    }
+
+    .card h3 {
+      color: #ffd700;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .price {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    .about {
+      text-align: center;
+      color: #ddd;
+      font-size: 18px;
+      max-width: 800px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #0b0b0b;
+      border-top: 1px solid rgba(255, 215, 0, .2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      background: #000;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="hero">
+      <div class="logo">CC</div>
+      <h1>Clair Complexe Studio</h1>
+      <p class="subtitle">
+        Studio Photo • Recording • Beat Production • Mix & Master
+      </p>
 
-<header>🎧 Clair Sound Studio</header>
+      <a class="btn" href="https://wa.me/50943403804?text=Bonjou%20mwen%20enterese%20nan%20sèvis%20Clair%20Complexe">
+        📲 Rezève sou WhatsApp
+      </a>
+    </div>
+  </header>
 
-<section>
-  <h2>Sèvis nou yo</h2>
+  <section>
+    <h2>Sèvis Nou Yo</h2>
 
-  <div class="card">
-    🎤 Recording Vocal
-    <br> 3000G - 6000G
-  </div>
+    <div class="services">
+      <div class="card">
+        <h3>📸 Photoshoot</h3>
+        <p>Portrait, passport, okazyon espesyal, retouch pro.</p>
+        <div class="price">500G - 1000G</div>
+      </div>
 
-  <div class="card">
-    🎶 Beat Production
-    <br> 3000G - 15000G
-  </div>
+      <div class="card">
+        <h3>🎤 Recording Vocal</h3>
+        <p>Recording pwòp, vwa klè, kalite studio.</p>
+        <div class="price">3000G - 6000G</div>
+      </div>
 
-  <div class="card">
-    📸 Photoshoot
-    <br> 500G - 1000G
-  </div>
-</section>
+      <div class="card">
+        <h3>🎶 Beat Production</h3>
+        <p>Afro, Drill, Trap, Reggae, Compas.</p>
+        <div class="price">3000G - 15000G</div>
+      </div>
 
-<section>
-  <h2>Kontakte nou</h2>
-  <a class="btn" href="https://wa.me/50943403804">
-    📲 Chat sou WhatsApp
-  </a>
-</section>
+      <div class="card">
+        <h3>🎚️ Mix & Master</h3>
+        <p>Son balans, fò, klè, pare pou distribisyon.</p>
+        <div class="price">Sou demann</div>
+      </div>
+    </div>
+  </section>
 
+  <section class="about">
+    <h2>Poukisa Chwazi Nou?</h2>
+    <p>
+      Clair Complexe bay sèvis kreyatif ak kalite pwofesyonèl pou atis,
+      antreprenè, elèv, fanmi, ak tout moun ki bezwen yon imaj oswa son ki pi bèl.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Ou Bezwen Yon Sèvis?</h2>
+    <p style="margin-bottom: 25px;">Plas limite chak semèn — rezève kounya.</p>
+
+    <a class="btn" href="https://wa.me/50943403804?text=Bonjou%20mwen%20vle%20rezève%20yon%20sèvis%20Clair%20Complexe">
+      Kontakte Nou
+    </a>
+  </section>
+
+  <footer>
+    © 2026 Clair Complexe / Clair Sound — Cap-Haïtien, Haiti
+  </footer>
 </body>
 </html>
