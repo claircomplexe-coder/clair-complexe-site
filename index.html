@@ -83,7 +83,27 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 22px;
+      
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+}
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      background: #000;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      box-shadow: 0 0 18px rgba(255, 215, 0, 0.12);
+      transition: transform 0.3s ease;
+}
+
+    .gallery img:hover {
+      transform: scale(1.04);
+}
 
     .card {
       background: #111;
@@ -178,7 +198,7 @@
   <section>
   <h2>Travay Nou</h2>
 
-  <div class="services">
+  <div class="gallery">
     <img src="images/IMG_6870.jpg" style="width:100%; border-radius:10px;">
     <img src="images/IMG_9852.jpg" style="width:100%; border-radius:10px;">
     <img src="images/IMG_6991.png" style="width:100%; border-radius:10px;">
